@@ -76,22 +76,26 @@ public class Main {
         caseDataList.add(new CaseData("c1", "/file1", "des1", example1));
         caseDataList.add(new CaseData("c2", "/db2", "des2", example2));
         dataMap.put("caseDataList", caseDataList);
-        List<Image> imageList = new ArrayList<>();
-        imageList.add(new Image(1, "png", "png", wordUtil.getImageStr("D:\\Pictures\\Saved Pictures\\71394986_0.png")));
-        imageList.add(new Image(2, "jpg", "jpg", wordUtil.getImageStr("D:\\Pictures\\Saved Pictures\\83088427_0.jpg")));
-        imageList.add(new Image(3, "jpg", "jpg", wordUtil.getImageStr("D:\\Pictures\\Saved Pictures\\83316513_p0.jpg")));
-        dataMap.put("imageList", imageList);
+        List<Image> imageList1 = new ArrayList<>();
+        imageList1.add(new Image(1, "png", "png", wordUtil.getImageStr("D:\\Pictures\\Saved Pictures\\71394986_0.png")));
+        imageList1.add(new Image(2, "jpg", "jpg", wordUtil.getImageStr("D:\\Pictures\\Saved Pictures\\83088427_0.jpg")));
+        dataMap.put("imageList1", imageList1);
         // 6 算法功能性测试
         dataMap.put("testRequirements", "歪比歪比");
-        dataMap.put("efficiencyTestList", new ArrayList<>(Arrays.asList(new Test("e1"), new Test("e2"))));
-        dataMap.put("precisionTestList", new ArrayList<>(Arrays.asList(new Test("p1"), new Test("p2"))));
+        dataMap.put("efficiencyTest", new EfficiencyTest("非常复杂", "ZB", "1s", "没什么好说的太强了"));
+        dataMap.put("precisionTest", new PrecisionTest("超强方法", "数据很多", "1", "2", "3", "4", "5", "10"));
+        dataMap.put("otherTestList", new ArrayList<>(Arrays.asList("o1", "o2", "o3")));
         dataMap.put("type", "一般类型");
         dataMap.put("specificType", "聚合");
         dataMap.put("ifPassed", "通过");
         dataMap.put("requirement", "好像有很多，但是我忘了");
         dataMap.put("testDescription", "测试没什么好描述的");
         dataMap.put("result", "超强的结果");
+        List<Image> imageList2 = new ArrayList<>();
+        imageList2.add(new Image(1, "jpg", "jpg", wordUtil.getImageStr("D:\\Pictures\\Saved Pictures\\83316513_p0.jpg")));
+        imageList2.add(new Image(2, "png", "png", wordUtil.getImageStr("D:\\Pictures\\Saved Pictures\\81903213_p0.png")));
+        dataMap.put("imageList2", imageList2);
 
-        wordUtil.createWord(dataMap, "AT.ftl", "D:/Data/Words/AT04.doc");
+        wordUtil.createWord(dataMap, "AT4.ftl", "D:/Data/Words/AT08.doc");
     }
 }
